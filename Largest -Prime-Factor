@@ -1,0 +1,22 @@
+#!/bin/python3
+
+import sys
+
+
+t = int(input().strip())
+for a0 in range(t):
+    n = int(input().strip())
+
+factors=[]
+prime_factors=[]
+def getFactors(n):    
+    for i in range(n-1):
+        if n % (i+1) == 0:
+            factors += [i+1]
+        
+for entry in factors:
+    for i in range(entry):
+        if getFactors(i+1) == []:
+            prime_factors += [i+1]
+            
+print(factors)
